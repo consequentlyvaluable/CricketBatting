@@ -6,8 +6,9 @@ const messageElement = document.getElementById("message");
 
 messageElement.textContent = "Loading the ground...";
 
-const THREE_MODULE_URL = "https://unpkg.com/three@0.160.0/build/three.module.js";
-const ORBIT_CONTROLS_URL = "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+const THREE_MODULE_URL = "https://unpkg.com/three@0.160.0/build/three.module.js?module";
+const ORBIT_CONTROLS_URL =
+  "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js?module";
 
 Promise.all([import(THREE_MODULE_URL), import(ORBIT_CONTROLS_URL)])
   .then(([THREE, { OrbitControls }]) => {
